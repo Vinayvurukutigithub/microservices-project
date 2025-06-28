@@ -14,7 +14,7 @@ pipeline {
                 echo "Pushing Docker image to Docker Hub"
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred') {
-                        sh "docker push vinayvinnu24/cartservice:v1"
+                        sh "docker push vinayvinnu24/cartservice:v1 "
                     }
                 }
             }
