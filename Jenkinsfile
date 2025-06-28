@@ -13,7 +13,7 @@ pipeline {
             steps {
                 echo "Pushing Docker image to Docker Hub"
                 script {
-                    withDockerRegistry([credentialsId: 'docker-cred') {
+                    withDockerRegistry(credentialsId: 'docker-cred') {
                         sh "docker push vinayvinnu24/adservice:v1 "
                     }
                 }
